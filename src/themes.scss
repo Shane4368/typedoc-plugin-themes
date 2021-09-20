@@ -1,0 +1,88 @@
+:root {
+    --color-scheme: light dark;
+    --light-color-panel-divider: #dadada;
+    --dark-color-background: #1f2127;
+    --dark-color-text-aside: #ccc;
+    --dark-color-panel-divider: #12141b;
+    --dark-code-background: #1a1d25;
+}
+
+@mixin dark-theme-colors {
+    --hl-0: var(--dark-hl-0);
+    --hl-1: var(--dark-hl-1);
+    --hl-2: var(--dark-hl-2);
+    --hl-3: var(--dark-hl-3);
+    --hl-4: var(--dark-hl-4);
+    --hl-5: var(--dark-hl-5);
+    --hl-6: var(--dark-hl-6);
+    --hl-7: var(--dark-hl-7);
+
+    --color-secondary-background: var(--dark-color-secondary-background);
+    --color-text: var(--dark-color-text);
+    --color-text-aside: var(--dark-color-text-aside);
+    --color-link: var(--dark-color-link);
+    --color-menu-divider: var(--dark-color-menu-divider);
+    --color-menu-divider-focus: var(--dark-color-menu-divider-focus);
+    --color-menu-label: var(--dark-color-menu-label);
+    --color-comment-tag: var(--dark-color-comment-tag);
+    --color-comment-tag-text: var(--dark-color-comment-tag-text);
+    --color-ts: var(--dark-color-ts);
+    --color-ts-interface: var(--dark-color-ts-interface);
+    --color-ts-enum: var(--dark-color-ts-enum);
+    --color-ts-class: var(--dark-color-ts-class);
+    --color-ts-private: var(--dark-color-ts-private);
+    --color-toolbar-text: var(--dark-color-toolbar-text);
+    --icon-filter: var(--dark-icon-filter);
+    --external-icon: var(--dark-external-icon);
+
+    --color-panel-divider: #000;
+}
+
+body {
+    &.light {
+        --color-scheme: light;
+    }
+
+    &.dark {
+        --color-panel-divider: #000;
+    }
+
+    &.dark-plus {
+        @include dark-theme-colors();
+        --color-background: #16171b;
+        --color-panel: #212225;
+        --color-toolbar: #2f3135;
+        --code-background: #17181b;
+    }
+
+    &.black {
+        @include dark-theme-colors();
+        --color-background: #000;
+        --color-panel: #050505;
+        --color-toolbar: #101010;
+        --code-background: var(--color-panel);
+    }
+
+    &.midnight-blue {
+        @include dark-theme-colors();
+        --color-background: #030513;
+        --color-panel: #080b23;
+        --color-toolbar: #0f1333;
+        --code-background: #06091b;
+    }
+}
+
+html {
+    color-scheme: var(--color-scheme);
+}
+
+#theme {
+    padding: 0.1rem;
+    border: 1px solid var(--color-text-aside);
+    background-color: inherit;
+    color: var(--color-text);
+
+    >option {
+        background-color: var(--color-background);
+    }
+}

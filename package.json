@@ -1,0 +1,25 @@
+{
+    "name": "typedoc-plugin-themes",
+    "version": "0.1.0",
+    "description": "A TypeDoc plugin that modifies the colors of the builtin themes and adds more to select from.",
+    "main": "src/index.js",
+    "files": [
+        "src/*.js",
+        "src/*.css",
+        "src/*.xml"
+    ],
+    "scripts": {
+        "prepare": "npm run-script compile",
+        "compile": "sass src/themes.scss:src/themes.css --no-source-map"
+    },
+    "keywords": [
+        "typedocplugin"
+    ],
+    "author": "Shane4368",
+    "license": "MIT",
+    "devDependencies": {
+        "sass": "^1.41.0",
+        "typedoc": "^0.22.4"
+    },
+    "private": true
+}
