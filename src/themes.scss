@@ -1,5 +1,4 @@
 :root {
-    --color-scheme: light dark;
     --light-color-panel-divider: #dadada;
     --dark-color-background: #1f2127;
     --dark-color-text-aside: #ccc;
@@ -38,42 +37,32 @@
     --color-panel-divider: #000;
 }
 
-body {
-    &.light {
-        --color-scheme: light;
-    }
-
-    &.dark {
-        --color-panel-divider: #000;
-    }
-
-    &.dark-plus {
-        @include dark-theme-colors();
-        --color-background: #16171b;
-        --color-panel: #212225;
-        --color-toolbar: #2f3135;
-        --code-background: #17181b;
-    }
-
-    &.black {
-        @include dark-theme-colors();
-        --color-background: #000;
-        --color-panel: #050505;
-        --color-toolbar: #101010;
-        --code-background: var(--color-panel);
-    }
-
-    &.midnight-blue {
-        @include dark-theme-colors();
-        --color-background: #030513;
-        --color-panel: #080b23;
-        --color-toolbar: #0f1333;
-        --code-background: #06091b;
-    }
+:root[data-theme='dark'] {
+    --color-panel-divider: #000;
 }
 
-html {
-    color-scheme: var(--color-scheme);
+:root[data-theme='dark-plus'] {
+    @include dark-theme-colors();
+    --color-background: #16171b;
+    --color-panel: #212225;
+    --color-toolbar: #2f3135;
+    --code-background: #17181b;
+}
+
+:root[data-theme='black'] {
+    @include dark-theme-colors();
+    --color-background: #000;
+    --color-panel: #050505;
+    --color-toolbar: #101010;
+    --code-background: var(--color-panel);
+}
+
+:root[data-theme='midnight-blue'] {
+    @include dark-theme-colors();
+    --color-background: #030513;
+    --color-panel: #080b23;
+    --color-toolbar: #0f1333;
+    --code-background: #06091b;
 }
 
 #theme {
