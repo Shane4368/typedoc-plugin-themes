@@ -43,7 +43,7 @@
 
 :root[data-theme='dark-plus'] {
     @include dark-theme-colors();
-    --color-background: #16171b;
+    --color-background: #121317;
     --color-panel: #212225;
     --color-toolbar: #2f3135;
     --code-background: #17181b;
@@ -52,17 +52,17 @@
 :root[data-theme='black'] {
     @include dark-theme-colors();
     --color-background: #000;
-    --color-panel: #050505;
+    --color-panel: #0b0b0b;
     --color-toolbar: #101010;
     --code-background: var(--color-panel);
 }
 
 :root[data-theme='midnight-blue'] {
     @include dark-theme-colors();
-    --color-background: #030513;
-    --color-panel: #080b23;
+    --color-background: #020206;
+    --color-panel: #0c102b;
     --color-toolbar: #0f1333;
-    --code-background: #06091b;
+    --code-background: #090b1f;
 }
 
 #theme {
